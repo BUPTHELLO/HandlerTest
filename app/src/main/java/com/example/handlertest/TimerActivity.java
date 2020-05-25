@@ -87,4 +87,10 @@ public class TimerActivity extends AppCompatActivity {
             }
         };
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mHandler.removeCallbacksAndMessages(null);
+    }
 }
